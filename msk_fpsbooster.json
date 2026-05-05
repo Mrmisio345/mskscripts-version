@@ -1,6 +1,8 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "descriptions": [
-	"Released"
+    "Fixed: copSirens option had no real effect — DistantCopCarSirens only toggles ambient distant siren atmosphere which is off by default in GTA; replaced with a dedicated loop using SetVehicleHasMutedSirens per vehicle, running every 1s to catch newly spawned/streamed police vehicles",
+    "Added: sirens are properly restored (unmuted) when the copSirens option is disabled or the resource is stopped",
+    "Improved: UI tab switching now has a smooth slide + fade + blur animation (out-in transition)"
   ]
 }

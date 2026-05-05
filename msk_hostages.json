@@ -1,6 +1,10 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "descriptions": [
-	"Added a disabled control for interaction"
+    "Fixed: hostage NPC animations not playing for nearby players — animation is now broadcast via a state bag handler (AddStateBagChangeHandler) so every client that streams the ped plays it, not only the placer",
+    "Added: Config.PlacementControl — configurable control ID for confirming placement (default: 38 / INPUT_PICKUP)",
+    "Added: Config.PlacementName — INPUT_* token name paired with PlacementControl, used in help text and resolved to a readable key label by msk_hud",
+    "Changed: RandomNpcs models are now plain strings instead of Lua integer literals (`model_name`) and are hashed at runtime via GetHashKey",
+    "Improved: placement help notification now shows the current animation label, index and total count (e.g. 'Surrender 2  [2/5]') and updates live as the player cycles animations with CELLPHONE_UP / CELLPHONE_DOWN"
   ]
 }
